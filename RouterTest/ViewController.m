@@ -18,7 +18,7 @@
     [super viewDidLoad];
     UIViewController * vc = [[HHRouter shared] matchController:@"test" withModel:nil block:^(BOOL finish, NSDictionary *param) {
         NSLog(@"收到回调:%@",param);
-    }];
+    } sender:self];
     if (vc) {
         [self presentViewController:vc animated:YES completion:nil];
     }

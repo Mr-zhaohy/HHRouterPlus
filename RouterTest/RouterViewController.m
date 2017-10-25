@@ -8,6 +8,7 @@
 
 #import "RouterViewController.h"
 #import "HHRouter+Plus.h"
+
 @interface RouterViewController ()
 
 @end
@@ -19,6 +20,8 @@
     NSLog(@"model:%@",self.receivedModel);
     NSLog(@"block:%@",self.routerBlock);
     NSLog(@"param:%@",self.params);
+    NSLog(@"sender:%@",self.routerSender);
+
     if (self.routerBlock) {
         self.routerBlock(YES, @{@"id":@"123"});
     }
